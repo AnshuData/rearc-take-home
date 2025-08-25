@@ -33,18 +33,18 @@ Install dependencies with:
 pip install -r requirements.txt
 
 
-Running the Code :
+## Running the Code :
 
-Clone this repository: git clone https://github.com/AnshuData/rearc-take-home.git
+1. Clone this repository: git clone https://github.com/AnshuData/rearc-take-home.git
 
-cd rearc-take-home 
+2. cd rearc-take-home 
 
-Run Part 1 ingestion: python part-1/series_data_ingest.py
+3. Run Part 1 ingestion: python part-1/series_data_ingest.py
     Note: We need to schedule this script in-order to continously keep in sync between source and sink; preferably using lambda function.
 
-Run Part 2 ingestion: python part-2/population_data_ingest.py
+4. Run Part 2 ingestion: python part-2/population_data_ingest.py
 
-Open Part 3 analysis in Jupyter: jupyter notebook part-3/data_analytics.ipynb
+5. Open Part 3 analysis in Jupyter: jupyter notebook part-3/data_analytics.ipynb
 
 Notes : Ensure you have AWS credentials configured (aws configure) to allow access to the S3 bucket to upload files.
 

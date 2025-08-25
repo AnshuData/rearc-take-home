@@ -92,7 +92,7 @@ def upload_file(bucket, name: str, content: bytes):
         Writes an object to the S3 bucket.
     """
     bucket.put_object(Key=name, Body=content)
-    logger.info(f"Uploaded/Updated: {name}")
+    logger.info(f"Uploaded: {name}")
 
 
 def delete_file(bucket, name: str):
