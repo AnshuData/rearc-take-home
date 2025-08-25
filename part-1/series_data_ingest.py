@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from loguru import logger
 
 
-S3_BUCKET = "rearc-series-data/se"
+S3_BUCKET = "rearc-series-data"
 DATA_SOURCE = "https://download.bls.gov/pub/time.series/pr/"
 USER_AGENT = "BLS-Data-Assignment/1.0 (anshujoshi432@gmail.com)"
 

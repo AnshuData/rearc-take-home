@@ -13,7 +13,8 @@ URL = (
 )
 
 
-def main():
+def ingest_series_data():
+    """"""
     try:
         # 1) Call API
         resp = requests.get(URL, timeout=15)
@@ -40,6 +41,10 @@ def main():
     except Exception as e:
         logger.error(f"Failed to extract data: {e}")
 
+
+def main():
+    """Entry point for ingestion job."""
+    ingest_series_data()
 
 if __name__ == "__main__":
     main()
