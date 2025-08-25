@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from loguru import logger
 
 
-S3_BUCKET = "rearc-series-data"
+S3_BUCKET = "rearc-series-data/se"
 DATA_SOURCE = "https://download.bls.gov/pub/time.series/pr/"
 USER_AGENT = "BLS-Data-Assignment/1.0 (anshujoshi432@gmail.com)"
 
@@ -21,6 +21,7 @@ def get_s3_bucket(bucket_name: str):
     """
     s3 = boto3.resource("s3")
     return s3.Bucket(bucket_name)
+
 
 def get_s3_files(bucket) -> set[str]:
     """
@@ -150,7 +151,6 @@ def sync_files(bucket, session, local_files: set[str], remote_files: set[str]):
         logger.info(" All files are already in sync. No updates needed.")
 
 
-
 def main():
     """
     Entry point for the sync job.
@@ -175,8 +175,7 @@ def main():
 
         Or configure a profile via `aws configure`.
 
-    Side Effects:
-        May upload, update, or delete files in the target S3 bucket.
+
     """
     try:
         # Initialize the S3 bucket.
@@ -201,4 +200,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

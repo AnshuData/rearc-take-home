@@ -5,10 +5,12 @@ from datetime import datetime, timezone
 import requests
 import boto3
 
-#configs
-BUCKET = "honolulu-population-data"  
-URL = ("https://honolulu-api.datausa.io/tesseract/data.jsonrecords"
-       "?cube=acs_yg_total_population_1&drilldowns=Year%2CNation&locale=en&measures=Population")
+# configs
+BUCKET = "honolulu-population-data"
+URL = (
+    "https://honolulu-api.datausa.io/tesseract/data.jsonrecords"
+    "?cube=acs_yg_total_population_1&drilldowns=Year%2CNation&locale=en&measures=Population"
+)
 
 
 def main():
@@ -37,6 +39,7 @@ def main():
 
     except Exception as e:
         logger.error(f"Failed to extract data: {e}")
+
 
 if __name__ == "__main__":
     main()
