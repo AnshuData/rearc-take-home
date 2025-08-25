@@ -21,11 +21,17 @@ Description:
 
 ## Requirements
 All scripts are written in Python 3.9+ and require the following packages:
+
 boto3
+
 requests
+
 beautifulsoup4
+
 loguru
+
 pandas
+
 aws cli
 
 Install dependencies with:
@@ -40,11 +46,12 @@ pip install -r requirements.txt
 2. cd rearc-take-home 
 
 3. Run Part 1 ingestion: python part-1/series_data_ingest.py
+   
     Note: We need to schedule this script in-order to continously keep in sync between source and sink; preferably using lambda function.
 
-4. Run Part 2 ingestion: python part-2/population_data_ingest.py
+5. Run Part 2 ingestion: python part-2/population_data_ingest.py
 
-5. Open Part 3 analysis in Jupyter: jupyter notebook part-3/data_analytics.ipynb
+6. Open Part 3 analysis in Jupyter: jupyter notebook part-3/data_analytics.ipynb
 
 Notes : Ensure you have AWS credentials configured (aws configure) to allow access to the S3 bucket to upload files.
 
