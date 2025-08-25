@@ -5,17 +5,20 @@ Each part demonstrates ingestion, processing, and analysis of data using Python.
 
 ## Part 1 – Series Data Ingestion
 Script: part-1/series_data_ingest.py
+
 Description:
     Reads the data from public BLS data web-url, and sync with data in AWS s3 bucket.
 
 
 ## Part 2 – Population Data Ingestion
 script : part-2/population_data_ingest.py
+
 Description:
     Ingests and processes population data using API call.
 
 ## Part 3 – Data Analytics
 Script : part-3/data_analytics.ipynb
+
 Description:
     Provides analysis and insights as per the instructions
 
@@ -54,6 +57,7 @@ pip install -r requirements.txt
 6. Open Part 3 analysis in Jupyter: jupyter notebook part-3/data_analytics.ipynb
 
 Notes : Ensure you have AWS credentials configured (aws configure) to allow access to the S3 bucket to upload files.
+Notes : We can automate the ingestion scripts to run on a schedule by setting them up as AWS Glue jobs (with triggers for time-based scheduling).
 
 
 Deliverables:
